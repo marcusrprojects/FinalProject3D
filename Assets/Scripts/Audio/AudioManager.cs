@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
-    public float volume; //global volume parameter set by the player
+    private float volume = 1; //global volume parameter set by the player
 
     //Awake is called before Start
     private void Awake()
@@ -30,6 +30,7 @@ public class AudioManager : MonoBehaviour
         foreach(Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
+
             s.source.clip = s.clip;
 
             s.source.volume = s.volume * volume;
@@ -49,15 +50,24 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
+    public void UpdateVolume(float newVolume)
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = s.volume * newVolume;
+        }
+        volume = newVolume;
+    }
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+
     }
 }

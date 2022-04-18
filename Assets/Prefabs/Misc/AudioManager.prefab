@@ -43,5 +43,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd6dd0629fb54c4aa09a9c0dc6d40cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Main Menu
+    clip: {fileID: 8300000, guid: 5750f8eb27c76494a873572789982578, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Main Menu Transition
+    clip: {fileID: 8300000, guid: b88018f6d1d130842aff183e2df971db, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   volume: 1

@@ -5,7 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
+
+    //On Menu Start
+    private void Start()
+    {
+
+        AudioManager.instance.Play("Main Menu");
+
+    }
+
     //Called as an action to play the game
     public void PlayGame()
     {
