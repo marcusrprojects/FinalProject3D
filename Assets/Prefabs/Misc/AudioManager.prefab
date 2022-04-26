@@ -50,10 +50,15 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: Main Menu Transition
-    clip: {fileID: 8300000, guid: b88018f6d1d130842aff183e2df971db, type: 3}
+  - name: Spaceport Intro
+    clip: {fileID: 8300000, guid: 63d166ca400c74c4baa4eeedb753c654, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  volume: 1
+  - name: Spaceport Loop
+    clip: {fileID: 8300000, guid: 14671462eadd99b499d163c31e1da678, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

@@ -1,5 +1,6 @@
 using UnityEngine.Audio;
 using System;
+using System.Collections;
 using UnityEngine;
 
 //Made using this tutorial: https://www.youtube.com/watch?v=6OT43pvUyfY
@@ -50,6 +51,33 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.source.Stop();
+    }
+
+    public void RunCoroutine(IEnumerator coroutine)
+    {
+        StartCoroutine(coroutine);
+    }
+
+    public bool IsPlaying(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return false;
+        }
+        return s.source.isPlaying;
+    }
+
     public void UpdateVolume(float newVolume)
     {
         foreach (Sound s in sounds)
@@ -57,6 +85,18 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume * newVolume;
         }
         volume = newVolume;
+    }
+
+    public void ReverseSound(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.pitch *= -1;
+        s.source.pitch *= -1;
     }
 
     // Start is called before the first frame update
@@ -68,6 +108,6 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-
+        
     }
 }

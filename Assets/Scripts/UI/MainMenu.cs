@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
     //Called as an action to play the game
     public void PlayGame()
     {
+        AudioManager.instance.RunCoroutine(AudioTransition());
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //loads next scene in scene management queue
     }
 
@@ -25,6 +26,26 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Exit");
         Application.Quit();
+    }
+
+    //Transition between menu and level
+    private IEnumerator AudioTransition()
+    {
+        AudioManager.instance.ReverseSound("Main Menu");
+        Debug.Log("Reverse 1");
+        yield return new WaitForSeconds(5f);
+        AudioManager.instance.Stop("Main Menu");
+        Debug.Log("Stop");
+        AudioManager.instance.ReverseSound("Main Menu");
+        Debug.Log("Reverse 2");
+        AudioManager.instance.Play("Spaceport Intro");
+        Debug.Log("Intro");
+        while (AudioManager.instance.IsPlaying("Spaceport Intro"))
+        {
+            yield return null;
+        }
+        AudioManager.instance.Play("Spaceport Loop");
+        Debug.Log("Loop");
     }
 
 }
