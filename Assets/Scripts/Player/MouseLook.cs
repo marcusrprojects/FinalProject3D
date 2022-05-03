@@ -13,6 +13,9 @@ public class MouseLook : MonoBehaviour
     [SerializeField] Transform playerBody;
     [SerializeField] GameObject flashlight;
 
+    [SerializeField] GameObject crosshair;
+    [SerializeField] GameObject pauseMenu;
+
     private Interactable focus;
 
     // Start is called before the first frame update
@@ -85,6 +88,13 @@ public class MouseLook : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             flashlight.SetActive(!flashlight.activeSelf);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0;
+            crosshair.SetActive(false);
+            pauseMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
         }
 
     }
