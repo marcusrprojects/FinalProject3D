@@ -11,6 +11,7 @@ public class MouseLook : MonoBehaviour
     private float xRotation = 0f;
 
     [SerializeField] Transform playerBody;
+    [SerializeField] GameObject flashlight;
 
     private Interactable focus;
 
@@ -81,6 +82,10 @@ public class MouseLook : MonoBehaviour
         {
             focus.OnActive.Invoke();
         }
-        
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            flashlight.SetActive(!flashlight.activeSelf);
+        }
+
     }
 }
