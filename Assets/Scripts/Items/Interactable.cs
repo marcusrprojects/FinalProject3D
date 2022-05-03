@@ -1,4 +1,9 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
+
+[Serializable]
+public class Active : UnityEvent { }
 
 public class Interactable : MonoBehaviour
 {
@@ -6,6 +11,8 @@ public class Interactable : MonoBehaviour
     public float radius = 3f;
 
     [SerializeField] Material[] mats;
+
+    public Active OnActive;
 
     private MeshRenderer render;
 

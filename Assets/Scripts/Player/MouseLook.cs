@@ -76,6 +76,11 @@ public class MouseLook : MonoBehaviour
             }
             focus = null;
         }
+
+        if (Input.GetKeyDown(KeyCode.E) && focus != null)
+        {
+            focus.OnActive.Invoke();
+        }
         
     }
 }

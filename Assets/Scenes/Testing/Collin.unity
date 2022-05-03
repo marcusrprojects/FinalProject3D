@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 568105923}
   - component: {fileID: 568105922}
   - component: {fileID: 568105927}
+  - component: {fileID: 568105928}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -252,6 +253,33 @@ MonoBehaviour:
   mats:
   - {fileID: 2100000, guid: 2f30e657ac556484fa354c74171ba86d, type: 2}
   - {fileID: 2100000, guid: 85be49d42664e474db5cc05b0dd503ca, type: 2}
+  OnActive:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 568105928}
+        m_TargetAssemblyTypeName: FakeMatrix, Assembly-CSharp
+        m_MethodName: TestAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &568105928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568105921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d7a690efd21be4190cb385407784bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &929585012
 GameObject:
   m_ObjectHideFlags: 0
