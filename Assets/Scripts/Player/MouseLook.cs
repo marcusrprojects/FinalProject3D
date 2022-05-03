@@ -59,6 +59,14 @@ public class MouseLook : MonoBehaviour
                     focus = null;
                 }
             }
+            else
+            {
+                if (focus != null)
+                {
+                    focus.UnHighlight();
+                }
+                focus = null;
+            }
         }
         else
         {
