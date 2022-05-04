@@ -5,8 +5,7 @@ public class PauseMenu : MonoBehaviour
     //Called as an action to continue the game
     public void ContinueGame()
     {
-        Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
+        MouseLook.instance.Unpause();
     }
 
     //Called as an action to exit the game

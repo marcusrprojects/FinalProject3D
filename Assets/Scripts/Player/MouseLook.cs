@@ -8,6 +8,8 @@ public class MouseLook : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
 
+    public static MouseLook instance;
+
     private float xRotation = 0f;
 
     [SerializeField] Transform playerBody;
@@ -17,6 +19,20 @@ public class MouseLook : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
 
     private Interactable focus;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -90,13 +106,26 @@ public class MouseLook : MonoBehaviour
             flashlight.SetActive(!flashlight.activeSelf);
             AudioManager.instance.Play("Flashlight");
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
         {
-            Time.timeScale = 0;
-            crosshair.SetActive(false);
+            Pause();
             pauseMenu.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
         }
 
     }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        crosshair.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = 1;
+        crosshair.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
 }
