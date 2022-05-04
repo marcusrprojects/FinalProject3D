@@ -9,6 +9,7 @@ public class FakeMatrix: MonoBehaviour
 
     public void TestAction()
     {
+        DialogueManager.instance.Play("Amogus");
         Debug.Log("I am a fake matrix!");
     }
 }

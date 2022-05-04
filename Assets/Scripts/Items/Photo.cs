@@ -16,7 +16,6 @@ public class Photo : MonoBehaviour
     {
         MouseLook.instance.Pause();
         AudioManager.instance.Play("Photo");
-       // DialogueManager.instance.Play("Amogus"); ...sus...
     }
 
     public void Back()
