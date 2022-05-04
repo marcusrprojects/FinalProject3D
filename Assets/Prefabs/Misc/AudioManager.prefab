@@ -62,3 +62,15 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Flashlight
+    clip: {fileID: 8300000, guid: aabd91115ac95a24dbd9e926551e54c7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Footsteps
+    clip: {fileID: 8300000, guid: c0e030e0923944f48bd1dc4d171e91a3, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

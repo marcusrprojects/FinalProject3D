@@ -42,6 +42,18 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
+        AudioManager manager = AudioManager.instance;
+
+        if(!manager.IsPlaying("Footsteps") && move != Vector3.zero)
+        {
+            manager.Play("Footsteps");
+        }
+
+        if(move == Vector3.zero)
+        {
+            manager.Stop("Footsteps");
+        }
+
         controller.Move(move * speed * Time.deltaTime);
 
         if(Input.GetButtonDown("Jump") /*&& isGrounded*/)

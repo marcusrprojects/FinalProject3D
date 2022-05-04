@@ -88,6 +88,7 @@ public class MouseLook : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             flashlight.SetActive(!flashlight.activeSelf);
+            AudioManager.instance.Play("Flashlight");
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
