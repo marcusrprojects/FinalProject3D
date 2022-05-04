@@ -10,8 +10,6 @@ public class Interactable : MonoBehaviour
 
     public float radius = 3f;
 
-    [SerializeField] Material[] mats;
-
     public Active OnActive;
 
     private MeshRenderer render;
@@ -20,17 +18,17 @@ public class Interactable : MonoBehaviour
     public void Start()
     {
         render = GetComponent<MeshRenderer>();
-        render.material = mats[0];
+        render.material.SetColor("_Color", Color.white);
     }
 
     public void Highlight()
     {
-        render.material = mats[1];
+        render.material.SetColor("_Color", Color.cyan);
     }
 
     public void UnHighlight()
     {
-        render.material = mats[0];
+        render.material.SetColor("_Color", Color.white);
     }
 
     private void OnDrawGizmosSelected()

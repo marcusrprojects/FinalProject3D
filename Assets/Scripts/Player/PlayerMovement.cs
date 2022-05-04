@@ -42,21 +42,19 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        AudioManager manager = AudioManager.instance;
-
-        if(!manager.IsPlaying("Footsteps") && move != Vector3.zero)
+        if(move != Vector3.zero && !AudioManager.instance.IsPlaying("Footsteps"))
         {
-            manager.Play("Footsteps");
+            AudioManager.instance.Play("Footsteps");
         }
 
-        if(move == Vector3.zero)
+        if(move == Vector3.zero && AudioManager.instance.IsPlaying("Footsteps"))
         {
-            manager.Stop("Footsteps");
+            AudioManager.instance.Stop("Footsteps");
         }
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump") /*&& isGrounded*/)
+        if (Input.GetButtonDown("Jump") /*&& isGrounded*/)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * GRAVITY);
         }

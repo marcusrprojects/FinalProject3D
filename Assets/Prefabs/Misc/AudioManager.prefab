@@ -74,3 +74,9 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Photo
+    clip: {fileID: 8300000, guid: ee0349a58dae8cc40801865a21f9e6b3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
