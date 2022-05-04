@@ -40,8 +40,29 @@ public class MouseLook : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    private void Update()
+    {
+        if(Time.timeScale != 0)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && focus != null)
+            {
+                focus.OnActive.Invoke();
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                flashlight.SetActive(!flashlight.activeSelf);
+                AudioManager.instance.Play("Flashlight");
+            }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Pause();
+                pauseMenu.SetActive(true);
+            }
+        }
+    }
+
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -95,21 +116,6 @@ public class MouseLook : MonoBehaviour
                 focus.UnHighlight();
             }
             focus = null;
-        }
-
-        if (Input.GetKeyDown(KeyCode.E) && focus != null)
-        {
-            focus.OnActive.Invoke();
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            flashlight.SetActive(!flashlight.activeSelf);
-            AudioManager.instance.Play("Flashlight");
-        }
-        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
-        {
-            Pause();
-            pauseMenu.SetActive(true);
         }
 
     }

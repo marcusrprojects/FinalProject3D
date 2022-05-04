@@ -9,6 +9,7 @@ public class OptionsMenu : MonoBehaviour
     public void ChangeVolume(float volume)
     {
         AudioManager.instance.UpdateVolume(volume);
+        DialogueManager.instance.UpdateVolume(volume);
     }
 
 }

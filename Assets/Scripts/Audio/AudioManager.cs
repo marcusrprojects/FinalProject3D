@@ -1,4 +1,3 @@
-using UnityEngine.Audio;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -97,17 +96,5 @@ public class AudioManager : MonoBehaviour
         }
         s.pitch *= -1;
         s.source.pitch *= -1;
-    }
-
-    // Start is called before the first frame update
-    private void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
     }
 }
