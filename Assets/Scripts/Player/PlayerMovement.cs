@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1f;
+    [Range(0.25f, 10.0f)]
     public float jumpHeight = 3f;
 
     public float groundDistance = 0.4f;
@@ -14,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask groundMask;
 
     private const float GRAVITY = -9.8f;
+
+    [Range(0.25f, 4.0f)]
+    public float gravityScale;
 
     private Vector3 velocity;
 
@@ -56,10 +60,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") /*&& isGrounded*/)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * GRAVITY);
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * GRAVITY * gravityScale);
         }
 
-        velocity.y += GRAVITY * Time.deltaTime;
+        velocity.y += GRAVITY * gravityScale * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
 }
