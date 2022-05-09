@@ -30,7 +30,6 @@ public class Interactable : MonoBehaviour
     {
         Vector3 playerPos = MouseLook.instance.transform.position;
         float distance = Vector3.Distance(playerPos, transform.position);
-        Debug.Log(distance);
         bool isHit = distance <= radius;
         if (!lastHit && isHit)
         {

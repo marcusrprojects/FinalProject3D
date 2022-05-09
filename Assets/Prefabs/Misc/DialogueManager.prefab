@@ -68,3 +68,21 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: AI_1_2
+    clip: {fileID: 8300000, guid: ecbbdc1d1cafe1d44bca143bc85bd844, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AI_1_3
+    clip: {fileID: 8300000, guid: 9031faafc1342764dbd32ccc571155de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AI_1_4
+    clip: {fileID: 8300000, guid: dafe3e3d5e4a3b945a4dff7d01c45153, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
