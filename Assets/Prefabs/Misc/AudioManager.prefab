@@ -52,13 +52,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Spaceport Intro
     clip: {fileID: 8300000, guid: 63d166ca400c74c4baa4eeedb753c654, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Spaceport Loop
     clip: {fileID: 8300000, guid: 14671462eadd99b499d163c31e1da678, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
