@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
 {
 
     public float radius = 3f;
+    public float clickRadius = 3f;
 
     public Active OnActive;
 
@@ -59,6 +60,7 @@ public class Interactable : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.DrawWireSphere(transform.position, clickRadius);
     }
 
 }
