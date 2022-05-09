@@ -86,3 +86,27 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: AI_2_1
+    clip: {fileID: 8300000, guid: 148efc1950c14214292661bf8f660af0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AI_2_2
+    clip: {fileID: 8300000, guid: d4679a3e23d0c8045b7cf390bcc0e943, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WILSON_2_1
+    clip: {fileID: 8300000, guid: 1868d5c149948d34bae397861cfe1da8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WILSON_2_2
+    clip: {fileID: 8300000, guid: 1e799dc1d9699ea4eb0eed2e91ed459f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
