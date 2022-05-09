@@ -59,7 +59,7 @@ public class MouseLook : MonoBehaviour
         if (isHit)
         {
             Interactable found = hit.collider.GetComponent<Interactable>();
-            if (found != null)
+            if (found != null && found.enabled)
             {
                 if(hit.distance <= found.clickRadius)
                 {

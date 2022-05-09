@@ -299,7 +299,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5516972945620308718}
         m_TargetAssemblyTypeName: Photo, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1

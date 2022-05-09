@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class World1 : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class World1 : MonoBehaviour
         {
             AudioManager.instance.Play("Tropical");
         }
+    }
+
+    public static void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //loads next scene in scene management queue
     }
 
 }
