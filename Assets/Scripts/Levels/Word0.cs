@@ -22,7 +22,12 @@ public class Word0 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(scenename);
+        //SceneManager.LoadScene(scenename);
         player.transform.position = teleportDest.transform.position;
+    }
+
+    public static void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //loads next scene in scene management queue
     }
 }
