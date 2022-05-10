@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 //Made using this tutorial: https://www.youtube.com/watch?v=_QajrabyTJc
 
@@ -60,9 +59,9 @@ public class MouseLook : MonoBehaviour
         if (isHit)
         {
             Interactable found = hit.collider.GetComponent<Interactable>();
-            if (found != null && found.enabled)
+            if (found != null)
             {
-                if(hit.distance <= found.clickRadius)
+                if(hit.distance <= found.radius)
                 {
                     if (focus != null)
                     {
@@ -112,22 +111,6 @@ public class MouseLook : MonoBehaviour
             {
                 Pause();
                 pauseMenu.SetActive(true);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                SceneManager.LoadScene(2);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                SceneManager.LoadScene(3);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                SceneManager.LoadScene(4);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                SceneManager.LoadScene(5);
             }
         }
 

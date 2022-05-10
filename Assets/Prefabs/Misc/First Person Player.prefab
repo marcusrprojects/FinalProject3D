@@ -4682,7 +4682,7 @@ GameObject:
   - component: {fileID: 4502902814520142545}
   - component: {fileID: 4502902814520142547}
   - component: {fileID: 4502902814520142544}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4826,7 +4826,6 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  gravityScale: 1
 --- !u!1 &4502902815349271173
 GameObject:
   m_ObjectHideFlags: 0
