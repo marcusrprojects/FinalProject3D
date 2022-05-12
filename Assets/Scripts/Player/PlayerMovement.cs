@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Made using this tutorial: https://www.youtube.com/watch?v=_QajrabyTJc
 
@@ -61,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") /*&& isGrounded*/)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * GRAVITY * gravityScale);
         }
@@ -74,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Death"))
         {
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
