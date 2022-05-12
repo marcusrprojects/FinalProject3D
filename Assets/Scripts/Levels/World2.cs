@@ -10,10 +10,10 @@ public class World2 : MonoBehaviour
     {
         DialogueManager.instance.Play("AI_2_1");
 
-        if (!AudioManager.instance.IsPlaying("Tropical"))
-        {
-            AudioManager.instance.Play("Tropical");
-        }
+        //if (!AudioManager.instance.IsPlaying("Tropical"))
+        //{
+            //AudioManager.instance.Play("Tropical");
+        //}
     }
 
     public static void NextLevel()

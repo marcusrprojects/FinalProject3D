@@ -9,10 +9,10 @@ public class World3 : MonoBehaviour
     {
         DialogueManager.instance.Play("Nealia_AI_1_FIXED");
 
-        if (!AudioManager.instance.IsPlaying("Tropical"))
-        {
-            AudioManager.instance.Play("Tropical");
-        }
+        //if (!AudioManager.instance.IsPlaying("Tropical"))
+        //{
+            //AudioManager.instance.Play("Tropical");
+        //}
     }
 
     public static void NextLevel()

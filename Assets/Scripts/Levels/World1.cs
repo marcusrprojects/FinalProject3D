@@ -8,11 +8,11 @@ public class World1 : MonoBehaviour
     {
         DialogueManager.instance.Play("AI_1_1");
 
-        if (!AudioManager.instance.IsPlaying("Tropical"))
-        {
-            AudioManager.instance.Play("Tropical");
-        }
-
+        //if (!AudioManager.instance.IsPlaying("Tropical"))
+        //{
+            //AudioManager.instance.Play("Tropical");
+        //}
+        /*
         if (AudioManager.instance.IsPlaying("Spaceport Intro"))
         {
             AudioManager.instance.Stop("Spaceport Intro");
@@ -21,6 +21,7 @@ public class World1 : MonoBehaviour
         {
             AudioManager.instance.Stop("Spaceport Loop");
         }
+        */
     }
 
     public static void NextLevel()

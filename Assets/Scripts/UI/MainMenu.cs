@@ -17,7 +17,8 @@ public class MainMenu : MonoBehaviour
     //Called as an action to play the game
     public void PlayGame()
     {
-        AudioManager.instance.RunCoroutine(AudioTransition());
+        //AudioManager.instance.RunCoroutine(AudioTransition());
+        //AudioManager.instance.Stop("Main Menu");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //loads next scene in scene management queue
     }
 
@@ -36,8 +37,8 @@ public class MainMenu : MonoBehaviour
         //yield return new WaitForSeconds(5f);
         AudioManager.instance.Stop("Main Menu");
         Debug.Log("Stop");
-        //AudioManager.instance.ReverseSound("Main Menu");
-        //Debug.Log("Reverse 2");
+        AudioManager.instance.ReverseSound("Main Menu");
+        Debug.Log("Reverse 2");
         AudioManager.instance.Play("Spaceport Intro");
         Debug.Log("Intro");
         while (AudioManager.instance.IsPlaying("Spaceport Intro"))

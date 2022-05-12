@@ -9,10 +9,12 @@ public class World5 : MonoBehaviour
     {
         DialogueManager.instance.Play("AI_2_1");
 
+        /*
         if (!AudioManager.instance.IsPlaying("Tropical"))
         {
             AudioManager.instance.Play("Tropical");
         }
+        */
     }
 
     public static void CorpEnd()

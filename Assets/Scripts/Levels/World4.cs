@@ -9,10 +9,12 @@ public class World4 : MonoBehaviour
     {
         DialogueManager.instance.Play("Achila_AI_1");
 
+        /*
         if (!AudioManager.instance.IsPlaying("Tropical"))
         {
             AudioManager.instance.Play("Tropical");
         }
+        */
     }
 
     public static void NextLevel()
