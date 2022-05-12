@@ -48,12 +48,12 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        if(move != Vector3.zero && !AudioManager.instance.IsPlaying("Footsteps"))
+        if((move != Vector3.zero && isGrounded) && !AudioManager.instance.IsPlaying("Footsteps"))
         {
             AudioManager.instance.Play("Footsteps");
         }
 
-        if(move == Vector3.zero && AudioManager.instance.IsPlaying("Footsteps"))
+        if((move == Vector3.zero || !isGrounded) && AudioManager.instance.IsPlaying("Footsteps"))
         {
             AudioManager.instance.Stop("Footsteps");
         }

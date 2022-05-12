@@ -113,6 +113,7 @@ public class MouseLook : MonoBehaviour
                 Pause();
                 pauseMenu.SetActive(true);
             }
+            /*
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 SceneManager.LoadScene(3);
@@ -129,6 +130,7 @@ public class MouseLook : MonoBehaviour
             {
                 SceneManager.LoadScene(6);
             }
+            */
         }
 
     }
