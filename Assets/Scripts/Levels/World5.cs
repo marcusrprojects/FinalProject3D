@@ -24,6 +24,6 @@ public class World5 : MonoBehaviour
 
     public static void FreeEnd()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Ending_Free");
     }
 }
