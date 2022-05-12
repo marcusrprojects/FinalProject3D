@@ -12,6 +12,15 @@ public class World1 : MonoBehaviour
         {
             AudioManager.instance.Play("Tropical");
         }
+
+        if (AudioManager.instance.IsPlaying("Spaceport Intro"))
+        {
+            AudioManager.instance.Stop("Spaceport Intro");
+        }
+        else if (AudioManager.instance.IsPlaying("Spaceport Loop"))
+        {
+            AudioManager.instance.Stop("Spaceport Loop");
+        }
     }
 
     public static void NextLevel()

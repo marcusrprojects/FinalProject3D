@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
 
             s.source.clip = s.clip;
 
-            s.source.volume = s.volume * volume;
+            s.source.volume = s.volume * volume * 2;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }

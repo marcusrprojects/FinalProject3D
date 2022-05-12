@@ -12,11 +12,6 @@ public class Word0 : MonoBehaviour
     void Start()
     {
         DialogueManager.instance.Play("AI_1_FIXED");
-
-        if (!AudioManager.instance.IsPlaying("Tropical"))
-        {
-            AudioManager.instance.Play("Tropical");
-        }
     }
 
     /*private void OnTriggerEnter(Collider other)
