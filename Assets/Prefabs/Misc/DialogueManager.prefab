@@ -134,3 +134,21 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: WILSON_3_3
+    clip: {fileID: 8300000, guid: d4c303508c34a87468f2afe5112a1611, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WILSON_3_4
+    clip: {fileID: 8300000, guid: 5cbc315b81b9a08418cff7dedfc4647a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WILSON_3_5
+    clip: {fileID: 8300000, guid: 772b3d3954f23dc49887c320d8ca9f7a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
