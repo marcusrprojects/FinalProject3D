@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Levels/Spaceport.unity
+    path: Assets/Scenes/Levels/Intro.unity
     guid: 030731f5e0814a64388b3f03a343b92f
   - enabled: 1
     path: Assets/Scenes/Menus/Main Menu.unity
