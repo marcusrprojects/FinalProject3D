@@ -7,7 +7,7 @@ public class World3 : MonoBehaviour
 {
     void Start()
     {
-        DialogueManager.instance.Play("AI_2_1");
+        DialogueManager.instance.Play("Nealia_AI_1_FIXED");
 
         if (!AudioManager.instance.IsPlaying("Tropical"))
         {

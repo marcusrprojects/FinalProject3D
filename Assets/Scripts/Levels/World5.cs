@@ -15,8 +15,13 @@ public class World5 : MonoBehaviour
         }
     }
 
-    public static void NextLevel()
+    public static void CorpEnd()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //loads next scene in scene management queue
+        Application.Quit();
+    }
+
+    public static void FreeEnd()
+    {
+        Application.Quit();
     }
 }
