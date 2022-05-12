@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Word0 : MonoBehaviour
 {
-    public Transform teleportDest;
-    public GameObject player;
+    //public Transform teleportDest;
+    //public GameObject player;
 
     // Start is called before the first frame update
     void Start()
