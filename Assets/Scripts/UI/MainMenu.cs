@@ -31,13 +31,13 @@ public class MainMenu : MonoBehaviour
     //Transition between menu and level
     private IEnumerator AudioTransition()
     {
-        AudioManager.instance.ReverseSound("Main Menu");
-        Debug.Log("Reverse 1");
-        yield return new WaitForSeconds(5f);
+        //AudioManager.instance.ReverseSound("Main Menu");
+        //Debug.Log("Reverse 1");
+        //yield return new WaitForSeconds(5f);
         AudioManager.instance.Stop("Main Menu");
         Debug.Log("Stop");
-        AudioManager.instance.ReverseSound("Main Menu");
-        Debug.Log("Reverse 2");
+        //AudioManager.instance.ReverseSound("Main Menu");
+        //Debug.Log("Reverse 2");
         AudioManager.instance.Play("Spaceport Intro");
         Debug.Log("Intro");
         while (AudioManager.instance.IsPlaying("Spaceport Intro"))
