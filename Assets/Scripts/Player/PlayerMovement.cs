@@ -25,10 +25,13 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController controller;
 
+    private Vector3 startPos;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        startPos = transform.position;
     }
 
     // Update is called once per frame
@@ -65,5 +68,13 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += GRAVITY * gravityScale * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Death"))
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
 }
